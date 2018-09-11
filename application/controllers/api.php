@@ -9,7 +9,7 @@ require APPPATH . 'libraries/Format.php';
 
 use Restserver\Libraries\REST_Controller;
 
-class Api extends CI_Controller
+class Api extends REST_Controller
 {
 	public function __construct()
 	{
@@ -60,6 +60,15 @@ class Api extends CI_Controller
         $this->load->view('templates/footer', []);
 
         // $this->response(TRUE, REST_Controller::HTTP_OK);
+    }
+
+    public function getFives_get() {
+
+        $this->load->model('News_model', 'NewsModel');
+
+        $result = $this->NewsModel->getFive();
+
+        $this->response($result, REST_Controller::HTTP_OK);
     }
 
 }

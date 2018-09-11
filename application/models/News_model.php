@@ -51,6 +51,11 @@ class News_model extends CI_Model {
 			return false;
 		}
 
+		public function getFive() {
+			$query = $this->db->get('five'); 
+			return $query->result_array();
+		}
+
 
 }
 

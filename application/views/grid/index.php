@@ -42,7 +42,7 @@
 
 		<br><br>
 
-		<div id="grid2" ui-grid='{ data: ctrl.myRemoteData }' class="grid"></div>
+		<div id="grid2" ui-grid='myRemoteData' ui-grid-pagination class="grid"></div>
 
 
 		<div class="modal fade" id="create_student_info_modal" tabindex="-1" role="dialog" aria-labelledby="create_student_info_modal" aria-hidden="true">
